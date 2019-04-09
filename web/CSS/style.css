@@ -1,0 +1,13 @@
+.img {
+  width: 20%;
+}
+
+.date, .userid {
+	white-space:nowrap;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
