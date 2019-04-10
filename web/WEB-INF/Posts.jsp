@@ -10,12 +10,16 @@
 <title>Posts list</title>
 </head>
 <body>
-	<p align="right">
-		<c:url value="/logout" var="logout"></c:url>
-		<a href="${logout}">Logout</a>
-	</p>
-
-	<h1>All Posts</h1>
+	<div class="top-bar">
+		<ul>
+			<li><h1>All Posts</h1></li>
+			<li style="float:right" > <p>
+				<c:url value="/logout" var="logout"></c:url>
+				<a href="${logout}">Logout</a>
+			</p>
+			</li>
+		</ul>
+	</div>
 	<h2> Welcome <c:out value="${sessionUser.userId}" /></h2>
 	
 	<form method="post" action="createpost">
@@ -27,7 +31,7 @@
 	<h2>Select a post id to pin it</h2>
 	<c:choose>
 		<c:when test="${posts.size()>0}">
-			<div><table border="1">
+			<div><table class="table_blur">
 				<tr>
 					<th>ID</th>
 					<th>Message</th>

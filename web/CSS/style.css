@@ -1,3 +1,60 @@
+@font-face {
+    font-family: "SF Pro Display";
+}
+
+.table_blur {
+    background: #f5ffff;
+    border-collapse: collapse;
+    text-align: left;
+    font-family: ".SF NS Display" !important;
+}
+.table_blur th {
+    border-top: 1px solid #777777;
+    border-bottom: 1px solid #777777;
+    box-shadow: inset 0 1px 0 #999999, inset 0 -1px 0 #999999;
+    background: linear-gradient(#9595b6, #5a567f);
+    color: white;
+    padding: 10px 15px;
+    position: relative;
+}
+.table_blur th:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 25%;
+    height: 25%;
+    width: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255,255,255,.08));
+}
+.table_blur tr:nth-child(odd) {
+    background: #ebf3f9;
+}
+.table_blur th:first-child {
+    border-left: 1px solid #777777;
+    border-bottom:  1px solid #777777;
+    box-shadow: inset 1px 1px 0 #999999, inset 0 -1px 0 #999999;
+}
+.table_blur th:last-child {
+    border-right: 1px solid #777777;
+    border-bottom:  1px solid #777777;
+    box-shadow: inset -1px 1px 0 #999999, inset 0 -1px 0 #999999;
+}
+.table_blur td {
+    border: 1px solid #e3eef7;
+    padding: 10px 15px;
+    position: relative;
+    transition: all 0.5s ease;
+}
+.table_blur tbody:hover td {
+    color: transparent;
+    text-shadow: 0 0 3px #a09f9d;
+}
+.table_blur tbody:hover tr:hover td {
+    color: #444444;
+    text-shadow: none;
+}
+
 .img {
   width: 20%;
 }
@@ -10,4 +67,78 @@ img {
   max-width: 100%;
   height: auto;
   object-fit: contain;
+}
+
+body {
+    font-family: "SF Pro Display";
+}
+form {
+    font-family: "SF Pro Display" !important;
+}
+
+input[type=text], input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: medium;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.42);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: medium;
+}
+
+input[type=submit]:hover {
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+body{
+    background-image: url("html-color-codes-color-tutorials-hero-00e10b1f.jpg");
+}
+
+.main{
+    padding: 20pt 20pt 20pt 20pt;
+    margin-top: 10%;
+    margin-right: 40%;
+    margin-left: 40%;
+    background-color: rgba(174, 182, 193, 0.44);
+}
+
+h1 {
+    color: #ffffff !important;
+    text-shadow: 2px, dimgray;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #444444;
+}
+
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li:hover {
+    font-weight: bold;
 }

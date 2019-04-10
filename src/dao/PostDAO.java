@@ -45,10 +45,15 @@ public class PostDAO {
         } finally {
             try {
                 result.close();
-                pstatement.close();
             } catch (SQLException e1) {
                 throw new SQLException("Cannot close");
             }
+            try {
+                pstatement.close();
+            } catch (SQLException e2) {
+                throw new SQLException("Cannot close");
+            }
+
         }
 
         //vanno ordinati per data ma non ricordo se crescente o decrescente
